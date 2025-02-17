@@ -59,15 +59,10 @@ DELIMITER ;
 call GetCustomerPaymentsByAmount(120,'2005-08-19 00:00:00');
 
 -- cau 9
-DROP VIEW IF EXISTS View_High_Value_Customers;
-DROP VIEW IF EXISTS View_Popular_Tracks;
 DROP VIEW IF EXISTS view_active_customer_rentals;
 DROP VIEW IF EXISTS view_customer_payments;
 DROP INDEX idx_Customer_Country ON customer;
-DROP INDEX idx_Track_Name_FT ON track;
 DROP INDEX idx_rental_customer_id ON rental;
 DROP INDEX idx_payment_customer_id ON payment;
-DROP PROCEDURE IF EXISTS GetHighValueCustomersByCountry;
-DROP PROCEDURE IF EXISTS UpdateCustomerSpending;
 DROP PROCEDURE IF EXISTS CheckCustomerEmail;
 DROP PROCEDURE IF EXISTS GetCustomerPaymentsByAmount;
