@@ -1,5 +1,5 @@
 create view EmployeeBranch as
-select e.EmployeeID,e.FullName,e.Position,e.Salary,b.BranchName,b.Location
+select e.EmployeeID,e.FullName,e.Position,e.Salary,b.BranchName,b.Location,b.phonenumber
 from employees e
 join branch b on e.BranchID = b.BranchID;
 
@@ -23,6 +23,7 @@ create view EmployeeBranch as
 select e.EmployeeID,e.FullName,e.Position,e.Salary,b.BranchName,b.Location,b.phonenumber
 from employees e
 join branch b on e.BranchID = b.BranchID;
+
 DELETE FROM Employees WHERE Branchid = (select Branchid from branch where branchname = 'Chi nhánh Hà Nội');
 
 SELECT * FROM Employees;
